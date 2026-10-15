@@ -41,6 +41,60 @@ What I Learned
 7. How to use git reset --hard safely on a separate practice branch.
 8. How to review commit history and check repository status.
 
+Chapter 1: Understanding git diff and git diff –staged
+
+I learned that git diff shows changes in tracked files that have not been staged yet. On the other hand, git diff --staged shows the changes that are already staged and ready to be committed.
+
+For the bhapa pitha recipe, I practiced checking changes before committing them. I also used git reset bazar-list.txt to unstage the shopping list without deleting the file.
+
+Chapter 3: Merge Conflict Resolution
+
+I created a separate recipe-test branch and changed the gur quantity in bhapa-pitha.md. I also changed the same line on main, using a different quantity.
+
+When I merged the branches, Git reported a merge conflict because both branches modified the same part of the file.
+
+I opened the file, selected the version I wanted to keep, removed the conflict markers, and committed the resolved file. In my test branch, I kept two cups of gur, while the main branch retained its one-cup version.
+
+Chapter 4: Fetch + Merge vs Pull
+
+git fetch origin downloads new commits and updates remote-tracking branches, but it does not automatically merge those changes into my current branch.
+
+After fetching, I used git merge origin/main to integrate the remote changes into my local branch.
+
+git pull origin main combines fetching with integrating the remote changes into the current branch. It is a convenient way to update a local branch from a remote branch.
+
+Chapter 5: Stash and Time Travel
+
+I started an unfinished halua.md recipe and saved it temporarily with git stash. I then updated the biryani recipe to specify four green cardamom pods, committed the change, and restored the unfinished halua work using git stash pop.
+
+I used git mv to move biryani.md into the recipes/ directory and git rm to remove shemai.md. I reviewed commit details with git show and file-change history with git log --stat -M.
+
+What I Observed with git reset –hard
+
+I created a separate reset-test branch from main and ran git reset --hard 8d9f43f.
+
+The test branch moved back to the selected older commit. Later commits were no longer part of the reset-test branch history, but main remained unchanged. This demonstrated why it is safer to practise destructive Git commands on a separate branch.
+
+Why Are Rebase and Reset –hard Dangerous on a Shared Branch?
+
+Rebase rewrites commit history by creating new commits with different commit IDs. If other people are already working with the original commits, rewriting that history can cause confusion and integration problems.
+
+git reset --hard moves the current branch to another commit and discards tracked working-tree changes. Commits that are no longer referenced by a branch may become difficult to recover. On a shared branch, this can disrupt other people’s work, especially if the rewritten history is pushed to the remote repository.
+
+For these reasons, I practised git reset --hard on a separate test branch and kept my main branch unchanged.
+
+Screenshots
+
+The following screenshots should be included with my assignment submission:
+
+1. Git status and the initial bhapa pitha recipe workflow.
+2. Git diff and staged changes, if captured.
+3. The .gitignore rules and Git status.
+4. The merge conflict and its resolution, if captured.
+5. GitHub repository and branch history.
+6. The stash, recipe rename, and recipe deletion workflow, if captured.
+7. The final git log --oneline --graph --all screenshot.
+
 Conclusion
 
 This project helped me understand the basic Git workflow, branch management, conflict resolution, and remote repository synchronization through a practical recipe-book project.
