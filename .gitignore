@@ -1,3 +1,4 @@
 secret-masala.txt
 *.tmp
 draft/
+.DS_Store
