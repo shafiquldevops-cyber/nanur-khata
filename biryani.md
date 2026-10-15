@@ -8,7 +8,7 @@
 - Ginger and garlic paste
 - Biryani spices
 - Salt and cooking oil
-- Cardamom
+- 4 green cardamom pods
 
 ## Preparation
 1. Wash and soak the rice.
