@@ -83,17 +83,22 @@ git reset --hard moves the current branch to another commit and discards tracked
 
 For these reasons, I practised git reset --hard on a separate test branch and kept my main branch unchanged.
 
+
 Screenshots
 
-The following screenshots should be included with my assignment submission:
+The following screenshots are included as evidence of my Git practice and repository history.
 
-1. Git status and the initial bhapa pitha recipe workflow.
-2. Git diff and staged changes, if captured.
-3. The .gitignore rules and Git status.
-4. The merge conflict and its resolution, if captured.
-5. GitHub repository and branch history.
-6. The stash, recipe rename, and recipe deletion workflow, if captured.
-7. The final git log --oneline --graph --all screenshot.
+1. Final Git History
+
+This screenshot shows the final Git commit history and the branches used in the project.
+
+2. Git History During Development
+
+This screenshot shows the Git commit history captured during an earlier stage of the project.
+
+Additional Evidence
+
+Other screenshots, such as git diff, git diff --staged, .gitignore, merge conflict resolution, and stash operations, can be included if available.
 
 Conclusion
 
